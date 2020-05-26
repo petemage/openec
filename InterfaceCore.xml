@@ -6,9 +6,8 @@
         <Script file="Source/StringUtils.lua" />
         <Script file="Source/CSVUtilities.lua" />
         <Script file="Source/EquipmentData.lua" />
-		<Script file="Source/Tooltips.lua" />
-		
-		<Script file="OpenUI/InterfaceCore.lua" />
+        <Script file="Source/Tooltips.lua" />
+        <Script file="OpenUI/InterfaceCore.lua" />
     </Scripts>
 
     <!-- Assets -->
@@ -20,5 +19,5 @@
     <Include file="Source/CoreWindowTemplates.xml" />
 
     <!-- Windows -->
-	<Include file="Source/Tooltips.xml" />
+    <Include file="Source/Tooltips.xml" />
 </Interface>

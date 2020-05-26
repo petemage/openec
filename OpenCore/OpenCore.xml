@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Interface
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="../Interface.xsd">
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../Interface.xsd">
 
     <Include file="OpenCore/Components/Components.xml" />
 
@@ -9,52 +7,52 @@
     <Scripts>
         <Script file="OpenCore/OpenCore.lua" />
         <Script file="OpenCore/Class.lua" />
-        
-        <!-- Services --> 
+
+        <!-- Services -->
         <Script file="OpenCore/Service/DateTime/DateTimeService.lua" />
         <Script file="OpenCore/Service/Debug/DebugService.lua" />
-        
+
         <Script file="OpenCore/Service/Client/ClientService.lua" />
         <Script file="OpenCore/Service/Viewport/ViewportService.lua" />
-        
+
         <Script file="OpenCore/Service/Window/Window.lua" />
         <Script file="OpenCore/Service/Window/WindowService.lua" />
         <Script file="OpenCore/Service/StaticText/StaticTextService.lua" />
         <Script file="OpenCore/Service/OverheadText/OverheadTextService.lua" />
         <Script file="OpenCore/Service/Tipoftheday/TipoftheDayService.lua" />
         <Script file="OpenCore/Service/GenericGump/GenericGumpService.lua" />
-        
+
         <Script file="OpenCore/Service/Object/Object.lua" />
         <Script file="OpenCore/Service/Object/ObjectService.lua" />
         <Script file="OpenCore/Service/Container/Container.lua" />
         <Script file="OpenCore/Service/Container/ContainerService.lua" />
-        
+
         <Script file="OpenCore/Service/Log/Log.lua" />
         <Script file="OpenCore/Service/Log/LogService.lua" />
-        
+
         <Script file="OpenCore/Service/Spellbook/Spellbook.lua" />
         <Script file="OpenCore/Service/Spellbook/SpellbookService.lua" />
-        
+
         <Script file="OpenCore/Service/MainMenu/MainMenuItem.lua" />
         <Script file="OpenCore/Service/MainMenu/MainMenuService.lua" />
-        
+
         <Script file="OpenCore/Service/ContextMenu/MenuItem.lua" />
         <Script file="OpenCore/Service/ContextMenu/LuaMenuItem.lua" />
         <Script file="OpenCore/Service/ContextMenu/ContextMenuService.lua" />
-        
+
         <Script file="OpenCore/Service/Skills/SkillService.lua" />
         <Script file="OpenCore/Service/Player/PlayerService.lua" />
         <Script file="OpenCore/Service/Paperdoll/Paperdoll.lua" />
         <Script file="OpenCore/Service/Paperdoll/PaperdollService.lua" />
-        
+
         <Script file="OpenCore/Service/Mobile/Mobile.lua" />
         <Script file="OpenCore/Service/Mobile/MobileService.lua" />
-        
+
         <Script file="OpenCore/Service/Hotbar/Hotbar.lua" />
         <Script file="OpenCore/Service/Hotbar/HotbarService.lua" />
         <Script file="OpenCore/Service/Targeting/TargetingService.lua" />
         <Script file="OpenCore/Service/Shop/ShopService.lua" />
-        
+
         <Script file="OpenCore/Service/Action/Actions.lua" />
 
     </Scripts>

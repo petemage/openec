@@ -1,3 +1,9 @@
+----
+-- @class OpenCore
+-- Central Base class for registering and accessing services and classes.
+--
+-- This class also provides a range of utility methods often needed in 
+-- various UI components
 OpenCore = {
   Version = "2019-08-29",
   Classes = {},
@@ -61,38 +67,66 @@ OpenCore = {
     self.TimePassed = self.TimePassed + timePassed
   end,
   
+  ----
+  -- @method GetServiceDir Gets the realtive path of the directory where the service source files are stored
+  -- @return string
   GetServiceDir = function (self)
     return "./UserInterface/"..SystemData.Settings.Interface.customUiName.."/OpenCore/Service"
   end,
   
+  ----
+  -- @method Now Gets the time passed since the UI was started
+  -- @return number
   Now = function (self)
     return self.TimePassed
   end,
   
+  ----
+  -- @method Chat Prints a message to the chat (only visible locally)
+  -- @param ... ... Mixed list of data to print
   Chat = function (self, ...)
     self.Debug:Chat(...)
   end,
   
+  ----
+  -- @method GetScale Gets the currently set UI scale
+  -- @return number
   GetScale = function (self)
     return self.Client:GetScale()
   end,
   
+  ----
+  -- @method GetMousePosition Gets the current mouse position xy coordinates
+  -- @return table Mouse position with x and y indexes
   GetMousePosition = function (self)
     return self.Client:GetMousePosition()
   end,
   
+  ----
+  -- @method GetWindowData Gets window data for a window
+  -- @param string name The name of the window
+  -- @return table The available window data
   GetWindowData = function (self, name)
     return self.Window:GetWindowData(name)
   end,
   
+  ----
+  -- @method GetActiveDialog Gets the currently active dialog
+  -- The Dialog is the topmost window below the root window.
+  -- A dialog will be composed of multiple windows itself
+  -- @return string The name of the active dialog
   GetActiveDialog = function (self)
     return self.Window:GetActiveDialog()
   end,
   
+  ----
+  -- @method GetActiveWindow Gets the currently active window name
+  -- @return string The active window name
   GetActiveWindow = function (self)
     return self.Window:GetActiveWindowName()
   end,
   
+  ----
   PrintBanner = function (self)
     self:Chat("OpenEC version " .. self.Version)
     --self.Debug:DumpToChat("OpenEC.Classes", self.Classes, {}, 1)
