@@ -1,0 +1,38 @@
+<Interface
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Scripts>
+		<Script file="OpenUI/OpenUI.lua" />
+		<Script file="OpenUI/Windows/OverheadText/OverheadWindow.lua" />
+	</Scripts>
+	<Windows>
+		<Window name="OpenUI.OverheadWindow" layer="background"
+			autoresize="true" handleinput="true">
+			<Size>
+				<AbsPoint x="250" y="25" />
+			</Size>
+			<EventHandlers>
+				<EventHandler event="OnInitialize"
+					function="OpenUI.OverheadWindow.OnInitialize" />
+				<EventHandler event="OnShutdown"
+					function="OpenUI.OverheadWindow.OnShutdown" />
+				<EventHandler event="OnShown"
+					function="OpenUI.OverheadWindow.OnShown" />
+			</EventHandlers>
+			<Windows>
+				<Label name="$parent.Label" font="OpenUI.Text.Overhead.Name"
+					maxchars="1024" textalign="center" autoresize="true" sticky="false"
+					wordwrap="true" handleinput="true" linespacing="20"
+					layer="background" draganddrop="true">
+					<Size>
+						<AbsPoint x="250" y="25" />
+					</Size>
+					<Anchors>
+						<Anchor point="bottom" relativePoint="bottom"
+							relativeTo="$parent" />
+					</Anchors>
+				</Label>
+			</Windows>
+		</Window>
+	</Windows>
+</Interface>

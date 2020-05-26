@@ -1,0 +1,14 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Windows>
+    <Window name="Shopkeeper" layer="background" autoresize="false" handleinput="true">
+      <Size>
+        <AbsPoint x="0" y="0" />
+      </Size>
+      <EventHandlers>
+        <EventHandler event="OnInitialize" function="OpenCore.Shop.OnInitializeWrap" />
+        <EventHandler event="OnShutdown" function="OpenCore.Shop.OnShutdownWrap" />
+        <EventHandler event="OnShown" function="OpenCore.Shop.OnOnShownWrap" />
+      </EventHandlers>
+    </Window>
+  </Windows>
+</Interface>

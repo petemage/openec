@@ -1,0 +1,13 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Windows>
+    <Window name="Spellbook" movable="true" layer="popup">
+      <Size>
+        <AbsPoint x="0" y="0" />
+      </Size>
+      <EventHandlers>
+        <EventHandler event="OnInitialize" function="OpenCore.Spellbook.OnWindowInitialize" />
+        <EventHandler event="OnShutdown" function="OpenCore.Spellbook.OnWindowShutdown" />
+      </EventHandlers>
+    </Window>
+  </Windows>
+</Interface>

@@ -1,0 +1,13 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Windows>
+    <Window name="ContextMenu" movable="true" layer="popup">
+      <Size>
+        <AbsPoint x="0" y="0" />
+      </Size>
+      <EventHandlers>
+        <EventHandler event="OnShown" function="ContextMenuWindow.OnShow" />
+        <EventHandler event="OnHidden" function="ContextMenuWindow.OnHide" />
+      </EventHandlers>
+    </Window>
+  </Windows>
+</Interface>

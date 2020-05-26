@@ -1,0 +1,30 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Windows>
+    <Button name="OpenUI.Button.Previous" 
+        backgroundtexture="UO_Core" 
+        highlighttexture="UO_Core">
+      <Size>
+        <AbsPoint x="30" y="24" />
+      </Size>
+      <TexCoords>
+        <Normal x="222" y="439" />
+        <NormalHighlit x="222" y="462" />
+        <Pressed x="222" y="462" />
+        <PressedHighlit x="222" y="462" />
+        <Disabled x="222" y="485" />
+      </TexCoords>
+    </Button>
+    
+    <Button name="OpenUI.Button.Previous.Short" inherits="OpenUI.Button.Previous">
+      <Size>
+        <AbsPoint x="15" y="24" />
+      </Size>
+    </Button>
+    
+    <Button name="OpenUI.Button.Previous.Small" texturescale="0.5" inherits="OpenUI.Button.Previous">
+      <Size>
+        <AbsPoint x="15" y="12" />
+      </Size>
+    </Button>
+  </Windows>
+</Interface>

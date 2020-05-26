@@ -1,0 +1,23 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Windows>
+    <!-- Main Menu Window Template -->
+    <FullResizeImage name="OpenCore.Window.Background.MainMenuFrame" layer="background" handleinput="false" texture="UO_Core" frameonly="true">
+      <Sizes>
+        <TopLeft x="18" y="18" />
+        <Middle x="18" y="18" />
+        <BottomRight x="18" y="18" />
+      </Sizes>
+      <TexCoords>
+        <TopLeft x="187" y="217" />
+        <TopCenter x="204" y="217" />
+        <TopRight x="227" y="217" />
+        <MiddleLeft x="187" y="235" />
+        <MiddleCenter x="204" y="235" />
+        <MiddleRight x="227" y="235" />
+        <BottomLeft x="187" y="253" />
+        <BottomCenter x="204" y="253" />
+        <BottomRight x="227" y="253" />
+      </TexCoords>
+    </FullResizeImage>
+  </Windows>
+</Interface>

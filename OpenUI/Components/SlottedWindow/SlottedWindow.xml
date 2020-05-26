@@ -1,0 +1,58 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+    <Scripts>
+        <Script file="OpenUI/OpenUI.lua" />
+        <Script file="OpenUI/Components/SlottedWindow/SlottedWindow.lua" />
+    </Scripts>
+    <Windows>
+        <VerticalResizeImage name="OpenUI.Components.SlottedWindow.ScrollThumb" texture="UO_Core" alpha="0.5" texturescale="0.33">
+            <Size>
+                <AbsPoint x="12" y="6" />
+            </Size>
+            <Sizes top="6" middle="6" bottom="10" />
+            <TexCoords>
+                <Top x="244" y="159" />
+                <Middle x="244" y="171" />
+                <Bottom x="244" y="183" />
+            </TexCoords>
+        </VerticalResizeImage>
+
+        <!-- Grid view -->
+        <ScrollWindow 
+            name="OpenUI.Components.SlottedWindow"
+            childscrollwindow="$parent.ScrollChild" 
+            scrollbar="$parent.Scrollbar" 
+            lineheight="60" 
+            draganddrop="true" 
+            autoHideScrollBar="true" 
+            popable="false">
+            <Anchors>
+                <Anchor point="topleft" relativePoint="topleft">
+                    <AbsPoint x="0" y="30" />
+                </Anchor>
+                <Anchor point="bottomright" relativePoint="bottomright"/>
+            </Anchors>
+            <EventHandlers>
+                <EventHandler event="OnLButtonUp" function="OpenUI.ContainerWindow.OnContainerRelease" />
+            </EventHandlers>
+            <Windows>                       
+                <Window name ="$parent.ScrollChild" popable="false">
+                    <Size>
+                        <AbsPoint x="270" y="0"/>
+                    </Size>
+                </Window>
+                <VerticalScrollbar name="$parent.Scrollbar" alpha="0.5" thumb="OpenUI.Components.SlottedWindow.ScrollThumb">
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topleft">
+                            <AbsPoint x="-7" y="0"/>
+                        </Anchor>
+                        <Anchor point="bottomright" relativePoint="bottomright">
+                            <AbsPoint x="0" y="0"/>
+                        </Anchor>
+                    </Anchors>
+                    <ActiveZoneOffset x="500" y="500" />
+                    <ThumbOffset x="0" y="0" />
+                </VerticalScrollbar>
+            </Windows>
+        </ScrollWindow>
+    </Windows>
+</Interface>

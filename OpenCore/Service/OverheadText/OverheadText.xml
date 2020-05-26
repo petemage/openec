@@ -1,0 +1,14 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Windows>
+    <Window alpha="0.8" name="OverheadTextWindow" layer="background" autoresize="true" handleinput="true">
+      <Size>
+        <AbsPoint x="0" y="0" />
+      </Size>
+      <EventHandlers>
+        <EventHandler event="OnInitialize" function="OverheadText.Initialize" />
+        <EventHandler event="OnShutdown" function="OverheadText.Shutdown" />
+        <EventHandler event="OnShown" function="OverheadText.OnShown" />
+      </EventHandlers>
+    </Window>
+  </Windows>
+</Interface>

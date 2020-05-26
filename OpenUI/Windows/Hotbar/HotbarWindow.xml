@@ -1,0 +1,245 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Scripts>
+    <Script file="OpenUI/OpenUI.lua" />
+    <Script file="OpenUI/Windows/Hotbar/HotbarWindow.lua" />
+  </Scripts>
+  <Windows>
+    <Button name="OpenUI.HotbarButton" sticky="false" draganddrop="true">
+      <Size>
+        <AbsPoint x="50" y="50" />
+      </Size>
+      <EventHandlers>
+          <EventHandler event="OnLButtonDown" function="OpenUI.HotbarWindow.Handler.ItemLButtonDown" />
+          <EventHandler event="OnLButtonUp" function="OpenUI.HotbarWindow.Handler.ItemLButtonUp" />
+          <EventHandler event="OnRButtonUp" function="OpenUI.HotbarWindow.Handler.ItemRButtonUp" />
+      </EventHandlers>
+      <Windows>
+        <DynamicImage name="$parent.Icon" texturescale="0.78" handleinput="false" layer="default">
+          <Size>
+            <AbsPoint x="50" y="50" />
+          </Size>
+          <Anchors>
+            <Anchor point="center" relativePoint="center" relativeTo="">
+              <AbsPoint x="0" y="0" />
+            </Anchor>
+          </Anchors>
+        </DynamicImage>
+        <DynamicImage name="$parent.IconBG" texturescale="0.78" handleinput="false" layer="background" sticky="true">
+          <Size>
+            <AbsPoint x="50" y="50" />
+          </Size>
+          <Anchors>
+            <Anchor point="center" relativePoint="center" relativeTo="">
+              <AbsPoint x="0" y="0" />
+            </Anchor>
+          </Anchors>
+        </DynamicImage>
+
+        <Label name="$parent.Quantity" font="UO_DefaultText" maxchars="6" textalign="left" autoresize="true" wordwrap="false" layer="popup" handleinput="false">
+          <Size>
+            <AbsPoint x="50" y="15" />
+          </Size>
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="bottomleft">
+              <AbsPoint x="5" y="-10" />
+            </Anchor>
+          </Anchors>
+          <Color r="255" g="255" b="255" a="255" />
+        </Label>
+        <!--Used to display the countdown for the bandage to take effect -->
+        <Label name="$parent.BandageTime" font="UO_DefaultText" maxchars="6" textalign="center" autoresize="true" wordwrap="false" layer="popup" handleinput="false">
+          <Size>
+            <AbsPoint x="50" y="15" />
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft">
+              <AbsPoint x="2" y="2" />
+            </Anchor>
+          </Anchors>
+          <Color r="255" g="255" b="255" a="255" />
+        </Label>
+        <!--Used for player stats for normal stats without the divider for 2/13 just a number -->
+        <Label name="$parent.Stats" font="UO_DefaultText_15pt" maxchars="6" textalign="center" autoresize="true" wordwrap="false" layer="popup" handleinput="false">
+          <Size>
+            <AbsPoint x="40" y="15" />
+          </Size>
+          <Anchors>
+            <Anchor point="bottomright" relativePoint="bottomright">
+              <AbsPoint x="0" y="-9" />
+            </Anchor>
+          </Anchors>
+          <Color r="0" g="0" b="0" a="0" />
+        </Label>
+        <!--Used for player stats for the top stats in the divider divider for 2/13, will be 2 -->
+        <Label name="$parent.StatsTop" font="UO_DefaultText_15pt" maxchars="3" textalign="center" autoresize="true" wordwrap="false" layer="popup" handleinput="false">
+          <Size>
+            <AbsPoint x="40" y="15" />
+          </Size>
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="bottomleft">
+              <AbsPoint x="8" y="-16" />
+            </Anchor>
+          </Anchors>
+          <Color r="0" g="0" b="0" a="0" />
+        </Label>
+        <!--Used for player stats for the top stats in the divider divider for 2/13, will be 13 -->
+        <Label name="$parent.StatsBottom" font="UO_DefaultText_15pt" maxchars="3" textalign="center" autoresize="true" wordwrap="false" layer="popup" handleinput="false">
+          <Size>
+            <AbsPoint x="40" y="15" />
+          </Size>
+          <Anchors>
+            <Anchor point="bottomleft" relativePoint="topleft" relativeTo="$parentStatsTop">
+              <AbsPoint x="0" y="1" />
+            </Anchor>
+          </Anchors>
+          <Color r="0" g="0" b="0" a="0" />
+        </Label>
+
+        <DynamicImage name="$parent.Disabled" texture="disabled" texturescale="3.125" handleinput="false" layer="popup">
+          <Size>
+            <AbsPoint x="50" y="50" />
+          </Size>
+          <Anchors>
+            <Anchor point="center" relativePoint="center" relativeTo="">
+              <AbsPoint x="0" y="0" />
+            </Anchor>
+          </Anchors>
+          <TexCoords x="0" y="0" />
+        </DynamicImage>
+        <DynamicImage name="$parent.Divider" texture="Large_Divider" handleinput="false" layer="default" alpha="0.0">
+          <Size>
+            <AbsPoint x="10" y="50" />
+          </Size>
+          <Anchors>
+            <Anchor point="left" relativePoint="left" >
+              <AbsPoint x="-5" y="0" />
+            </Anchor>
+          </Anchors>
+          <TexCoords x="0" y="0"/>
+        </DynamicImage>
+
+        <!-- <DynamicImage name="$parent.HotkeyBackground" texture="Slot_Shadow" handleinput="false" layer="secondary">
+          <Size>
+            <AbsPoint x="30" y="15" />
+          </Size>
+          <Anchors>
+            <Anchor point="topright" relativePoint="topright" >
+              <AbsPoint x="-3" y="3" />
+            </Anchor>
+          </Anchors>
+          <TexCoords x="0" y="0"/>
+        </DynamicImage> -->
+        <Label name="$parent.Hotkey" font="UO_Default_Outline_Text" maxchars="6" textalign="right"  layer="popup" handleinput="false">
+          <Size>
+            <AbsPoint x="50" y="15" />
+          </Size>
+          <Anchors>
+            <Anchor point="topright" relativePoint="topright">
+              <AbsPoint x="-5" y="3" />
+            </Anchor>
+          </Anchors>
+          <Color r="0" g="255" b="0" a="255" />
+        </Label>
+      </Windows>
+      <!-- <TexCoords>
+        <Normal texture="Slot_Button" x="0" y="0" />
+        <Disabled texture="Slot_Button" x="0" y="0" />
+        <Pressed texture="Slot_Button" x="0" y="0" />
+      </TexCoords> -->
+    </Button>
+  
+    <Window name="OpenUI.HotbarWindow" alpha="0.6" movable="false" layer="default" sticky="false">
+      <Size>
+        <AbsPoint x="600" y="50" />
+      </Size>
+      <Anchors>
+        <Anchor point="center" relativePoint="center" relativeTo="">
+          <AbsPoint x="0" y="0" />
+        </Anchor>
+      </Anchors>
+      <EventHandlers>
+        <EventHandler event="OnInitialize" function="OpenCore.Window.Handler.Initialize" />
+        <EventHandler event="OnShutdown" function="OpenCore.Window.Handler.Shutdown" />
+      </EventHandlers>
+      <Windows>
+        <FullResizeImage name="$parent.Background" alpha="0.5" inherits="OpenUI.Window.Background.Black" />
+        <DynamicImage name="$parent.Handle" >
+          <Size>
+            <AbsPoint x="20" y="50" />
+          </Size>
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft">
+              <AbsPoint x="0" y="0" />
+            </Anchor>
+          </Anchors>
+          <EventHandlers>
+            <EventHandler event="OnLButtonDown" function="OpenUI.HotbarWindow.OnHandleLButtonDown" />
+            <EventHandler event="OnLButtonUp" function="OpenUI.HotbarWindow.OnHandleLButtonUp" />
+          </EventHandlers>
+        </DynamicImage>
+                <Button name="$parent.Button.1" inherits="OpenUI.HotbarButton" id="1">
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topleft" relativeTo="$parent.Handle">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                </Button>
+                <Button name="$parent.Button.2" inherits="OpenUI.HotbarButton" id="2" >
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topleft" relativeTo="$parent.Button.1" />
+                    </Anchors>              
+                </Button>
+                <Button name="$parent.Button.3" inherits="OpenUI.HotbarButton" id="3" >
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topleft" relativeTo="$parent.Button.2" />
+                    </Anchors>                              
+                </Button>
+                <Button name="$parent.Button.4" inherits="OpenUI.HotbarButton" id="4" >
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topleft" relativeTo="$parent.Button.3" />
+                    </Anchors>                              
+                </Button>
+                <Button name="$parent.Button.5" inherits="OpenUI.HotbarButton" id="5" >
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topleft" relativeTo="$parent.Button.4" />
+                    </Anchors>                              
+                </Button>
+                <Button name="$parent.Button.6" inherits="OpenUI.HotbarButton" id="6" >
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topleft" relativeTo="$parent.Button.5" />
+                    </Anchors>                              
+                </Button>
+                <Button name="$parent.Button.7" inherits="OpenUI.HotbarButton" id="7" >
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topleft" relativeTo="$parent.Button.6" />
+                    </Anchors>                              
+                </Button>
+                <Button name="$parent.Button.8" inherits="OpenUI.HotbarButton" id="8" >
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topleft" relativeTo="$parent.Button.7" />
+                    </Anchors>                              
+                </Button>
+                <Button name="$parent.Button.9" inherits="OpenUI.HotbarButton" id="9" >
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topleft" relativeTo="$parent.Button.8" />
+                    </Anchors>                              
+                </Button>
+                <Button name="$parent.Button.10" inherits="OpenUI.HotbarButton" id="10" >
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topleft" relativeTo="$parent.Button.9" />
+                    </Anchors>                              
+                </Button>
+                <Button name="$parent.Button.11" inherits="OpenUI.HotbarButton" id="11" >
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topleft" relativeTo="$parent.Button.10" />
+                    </Anchors>                              
+                </Button>
+                <Button name="$parent.Button.12" inherits="OpenUI.HotbarButton" id="12" >
+                    <Anchors>
+                        <Anchor point="topright" relativePoint="topleft" relativeTo="$parent.Button.11" />
+                    </Anchors>                              
+                </Button>
+      </Windows>
+    </Window>
+  </Windows>
+</Interface>

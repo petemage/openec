@@ -1,0 +1,22 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Windows>
+    <FullResizeImage name="OpenCore.Window.Background.ResizingFrame" layer="overlay" texture="UO_ResizeFrame"  handleinput="true" frameonly="true">
+      <Sizes>
+        <TopLeft x="12" y="12" />
+        <Middle x="40" y="40" />
+        <BottomRight x="12" y="12" />
+      </Sizes>
+      <TexCoords>
+        <TopLeft x="0" y="0" />
+        <TopCenter x="12" y="0" />
+        <TopRight x="52" y="0" />
+        <MiddleLeft x="0" y="12" />
+        <MiddleCenter x="12" y="12" />
+        <MiddleRight x="52" y="12" />
+        <BottomLeft x="0" y="52" />
+        <BottomCenter x="12" y="52" />
+        <BottomRight x="52" y="52" />
+      </TexCoords>
+    </FullResizeImage>
+  </Windows>
+</Interface>

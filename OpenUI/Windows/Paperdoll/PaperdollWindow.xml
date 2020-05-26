@@ -1,0 +1,50 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Scripts>
+    <Script file="OpenUI/OpenUI.lua" />
+    <Script file="OpenUI/Windows/Paperdoll/PaperdollWindow.lua" />
+  </Scripts>
+  <Windows>
+    <Window name="OpenUI.PaperdollWindow" movable="true" sticky="true" popable="true" layer="default">
+      <Size>
+        <AbsPoint x="200" y="400" />
+      </Size>
+      <Anchors>
+        <Anchor point="center" relativePoint="center" relativeTo="">
+          <AbsPoint x="0" y="0" />
+        </Anchor>
+      </Anchors>
+      <EventHandlers>
+        <EventHandler event="OnInitialize" function="OpenUI.PaperdollWindow.OnInitialize" />
+        <EventHandler event="OnShutdown" function="OpenUI.PaperdollWindow.OnShutdown" />
+        <EventHandler event="OnRButtonUp" function="OpenUI.PaperdollWindow.OnCloseWindow" />
+      </EventHandlers>
+      <Windows>
+        <FullResizeImage name="$parent.Background" alpha="0.5" inherits="OpenUI.Window.Background.Black" />
+        
+        <DynamicImage name="$parent.Texture" 
+            texture="" 
+            filtering="true" 
+            texturescale="1.0" 
+            handleinput="true" 
+            sticky="false" 
+            draganddrop="true" 
+            popable="false" 
+            layer="secondary">
+          <Size>
+            <AbsPoint x="0" y="0" />
+          </Size>
+          <Anchors>
+            <Anchor point="bottom" relativePoint="center">
+              <AbsPoint x="0" y="0" />
+            </Anchor>
+          </Anchors>
+          <TexCoords x="0" y="0" />
+          <EventHandlers>
+            <EventHandler event="OnLButtonDown" function="OpenUI.PaperdollWindow.OnPaperdollLButtonDown" />
+            <EventHandler event="OnLButtonUp" function="OpenUI.PaperdollWindow.OnPaperdollLButtonUp" />
+          </EventHandlers>
+        </DynamicImage>
+      </Windows>
+    </Window>
+  </Windows>
+</Interface>

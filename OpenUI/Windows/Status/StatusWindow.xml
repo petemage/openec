@@ -1,0 +1,95 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Scripts>
+    <Script file="OpenUI/OpenUI.lua" />
+    <Script file="OpenUI/Windows/Status/StatusWindow.lua" />
+  </Scripts>
+  <Windows>
+    <Window name="OpenUI.StatusWindow" movable="true" layer="default" sticky="false">
+      <Size>
+        <AbsPoint x="258" y="91" />
+      </Size>
+      <Anchors>
+        <Anchor point="center" relativePoint="center" relativeTo="">
+          <AbsPoint x="0" y="0" />
+        </Anchor>
+      </Anchors>
+      <EventHandlers>
+        <EventHandler event="OnInitialize" function="OpenCore.Window.Handler.Initialize" />
+        <EventHandler event="OnShutdown" function="OpenCore.Window.Handler.Shutdown" />
+      </EventHandlers>
+      <Windows>
+        <DynamicImage name="$parent.Background" 
+            alpha="0.5"
+            texture="hud_image" 
+            layer="background" 
+            handleinput="false">
+          <Size>
+            <AbsPoint x="258" y="91" />
+          </Size>
+        </DynamicImage>
+        
+        <CircleImage name="$parent.PortraitBackground" texture="hud_image" numsegments="16" texturescale="1.95" layer="background" popable="false" handleinput="false">
+            <Size>
+                <AbsPoint x="75" y="75" />
+            </Size>
+            <Anchors>
+                <Anchor point="topleft" relativePoint="topleft">
+                    <AbsPoint x="10" y="10" />
+                </Anchor>
+            </Anchors>
+            <TexCoords x="398" y="50" />
+        </CircleImage>
+        
+        <CircleImage name="$parent.Portrait" 
+            numsegments="16" texturescale="1.0" 
+            layer="background" 
+            handleinput="false" >
+           <Size>
+               <AbsPoint x="75" y="75" />
+           </Size>
+           <Anchors>
+               <Anchor point="topleft" relativePoint="topleft">
+                   <AbsPoint x="10" y="10" />
+               </Anchor>
+           </Anchors>
+         </CircleImage>
+         
+         <StatusBar name="$parent.HealthBar" background="" foreground="OpenCore.HorizontalResizeImage.Blank" >
+		   <ForegroundOffset x="0" y="0" />
+		   <Size>
+               <AbsPoint x="163" y="7" />
+           </Size>
+           <Anchors>
+               <Anchor point="topleft" relativePoint="topleft">
+                   <AbsPoint x="83" y="14" />
+               </Anchor>
+           </Anchors>
+		 </StatusBar>
+		 
+		 <StatusBar name="$parent.ManaBar" background="" foreground="OpenCore.HorizontalResizeImage.Blue" >
+           <ForegroundOffset x="0" y="0" />
+           <Size>
+               <AbsPoint x="153" y="7" />
+           </Size>
+           <Anchors>
+               <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent.HealthBar">
+                   <AbsPoint x="10" y="11" />
+               </Anchor>
+           </Anchors>
+         </StatusBar>
+         
+         <StatusBar name="$parent.StaminaBar" background="" foreground="OpenCore.HorizontalResizeImage.Yellow" >
+           <ForegroundOffset x="0" y="0" />
+           <Size>
+               <AbsPoint x="146" y="7" />
+           </Size>
+           <Anchors>
+               <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent.ManaBar">
+                   <AbsPoint x="6" y="12" />
+               </Anchor>
+           </Anchors>
+         </StatusBar>
+      </Windows>
+    </Window>
+  </Windows>
+</Interface>

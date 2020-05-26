@@ -1,0 +1,28 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Windows>
+    <Window name="OpenUI.MainMenuItem">
+      <Size>
+        <AbsPoint x="200" y="40" />
+      </Size>
+      <Windows>
+        <Button name="$parent.Button" alpha="0.7" texturescale="0.9" backgroundtexture="" 
+            highlighttexture="Menu_Selection" font="OpenUI.Text.MainMenu" layer="default">
+          <Size>
+            <AbsPoint x="200" y="40" />
+          </Size>
+          <Anchors>
+            <Anchor point="center" relativePoint="center">
+              <AbsPoint x="0" y="0" />
+            </Anchor>
+          </Anchors>
+          <TexCoords>
+            <PressedHighlit x="10" y="10" />
+          </TexCoords>
+          <EventHandlers>
+            <EventHandler event="OnLButtonUp" function="OpenUI.MainMenuWindow.OnClick" />
+          </EventHandlers>
+        </Button>
+      </Windows>
+    </Window>
+  </Windows>
+</Interface>

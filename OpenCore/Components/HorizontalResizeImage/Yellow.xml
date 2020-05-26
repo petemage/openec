@@ -1,0 +1,15 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Windows>
+    <HorizontalResizeImage name="OpenCore.HorizontalResizeImage.Yellow" texture="hud_image">
+      <Size>
+        <AbsPoint x="147" y="7" />
+      </Size>
+      <Sizes left="10" middle="127" right="10" />
+      <TexCoords>
+        <Left x="18" y="122" />
+        <Middle x="28" y="122" />
+        <Right x="155" y="122" />
+      </TexCoords>
+    </HorizontalResizeImage>
+  </Windows>
+</Interface>

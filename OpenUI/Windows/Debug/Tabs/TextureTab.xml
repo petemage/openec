@@ -1,0 +1,39 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Windows>
+    <Window name="OpenUI.DebugWindow.TextureTab">
+      <Size>
+        <AbsPoint x="0" y="0" />
+      </Size>
+      <Anchors>
+        <Anchor point="topleft" relativePoint="topleft" />
+        <Anchor point="bottomright" relativePoint="bottomright" />  
+      </Anchors>
+      <Windows>
+        <EditBox name="$parent.TextInput" 
+            font="UO_DefaultText" 
+            maxchars="200" 
+            history="true">   
+            <Anchors>
+              <Anchor point="topleft" relativePoint="topleft" />
+              <Anchor point="topright" relativePoint="bottomright">
+                <AbsPoint x="0" y="30" />
+              </Anchor>
+            </Anchors>
+            <TextOffset x="3" y="3" />
+            <EventHandlers>
+              <EventHandler event="OnKeyEnter" function="OpenUI.DebugWindow.Handler.TextureInput"/>
+            </EventHandlers>
+        </EditBox>
+      
+        <DynamicImage name="$parent.Texture">
+          <Anchors>
+            <Anchor point="topleft" relativePoint="topleft">
+              <AbsPoint x="0" y="30" />
+            </Anchor>
+            <Anchor point="bottomright" relativePoint="bottomright" />  
+          </Anchors>
+        </DynamicImage>
+      </Windows>
+    </Window>
+  </Windows>
+</Interface>

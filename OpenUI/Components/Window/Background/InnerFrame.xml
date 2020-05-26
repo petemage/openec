@@ -1,0 +1,23 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Windows>
+    <!-- Inner Frame Template -->
+    <FullResizeImage name="OpenUI.Window.Background.InnerFrame" layer="background" handleinput="false" texture="UO_Core" frameonly="true">
+      <Sizes>
+        <TopLeft x="10" y="10" />
+        <Middle x="40" y="10" />
+        <BottomRight x="10" y="10" />
+      </Sizes>
+      <TexCoords>
+        <TopLeft x="128" y="49" />
+        <TopCenter x="139" y="49" />
+        <TopRight x="246" y="49" />
+        <MiddleLeft x="128" y="60" />
+        <MiddleCenter x="139" y="60" />
+        <MiddleRight x="246" y="60" />
+        <BottomLeft x="128" y="147" />
+        <BottomCenter x="139" y="147" />
+        <BottomRight x="246" y="147" />
+      </TexCoords>
+    </FullResizeImage>
+  </Windows>
+</Interface>

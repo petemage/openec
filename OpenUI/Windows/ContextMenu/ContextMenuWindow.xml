@@ -1,0 +1,43 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+    <Scripts>
+        <Script file="OpenUI/OpenUI.lua" />
+        <Script file="OpenUI/Windows/ContextMenu/ContextMenuWindow.lua" />
+    </Scripts>
+    <Windows>    
+    <Button name="OpenUI.ContextMenuItem" texturescale="1.1" alpha="0.5" 
+        backgroundtexture="UO_Common" font="UO_DefaultText" textalign="left" 
+        highlighttexture="UO_Common">
+            <Size>
+                <AbsPoint x="270" y="25" />
+            </Size>
+            <TexCoords>
+                <NormalHighlit x="264" y="259" />
+                <PressedHighlit x="264" y="259" />
+            </TexCoords>
+            <TextColors>
+                <Normal r="255" g="255" b="255" a="255"/>
+                <NormalHighlit r="243" g="227" b="49" a="255"/>
+                <Pressed r="255" g="0" b="0" a="255"/>
+                <PressedHighlit r="255" g="0" b="0" a="255"/>
+                <Disabled r="128" g="128" b="128" a="128"/>
+            </TextColors>
+            <TextOffset x="7" y="4" />
+            <EventHandlers>
+                <EventHandler event="OnLButtonUp" function="OpenUI.ContextMenuWindow.OnItemClick"/>
+            </EventHandlers>
+        </Button>   
+        
+        <Window name="OpenUI.ContextMenuWindow" movable="true" layer="popup">
+            <Size>
+                <AbsPoint x="275" y="200" />
+            </Size>
+            <EventHandlers>
+                <EventHandler event="OnInitialize" function="OpenUI.ContextMenuWindow.OnInitialize" />
+                <EventHandler event="OnShutdown" function="OpenUI.ContextMenuWindow.OnShutdown" />
+            </EventHandlers>
+            <Windows>
+                <FullResizeImage name="$parent.Background" alpha="0.5" inherits="OpenUI.Window.Background.Black" />
+            </Windows>
+        </Window>
+    </Windows>
+</Interface>

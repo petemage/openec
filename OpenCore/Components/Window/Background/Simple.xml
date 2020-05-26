@@ -1,0 +1,23 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Windows>
+    <!-- Default Black Background -->
+    <FullResizeImage name="OpenCore.Window.Background.Simple" layer="background" handleinput="false" texture="UO_Background">
+      <Sizes>
+        <TopLeft x="42" y="48" />
+        <Middle x="42" y="36" />
+        <BottomRight x="42" y="42" />
+      </Sizes>
+      <TexCoords>
+        <TopLeft x="0" y="0" />
+        <TopCenter x="42" y="0" />
+        <TopRight x="85" y="0" />
+        <MiddleLeft x="0" y="48" />
+        <MiddleCenter x="42" y="48" />
+        <MiddleRight x="85" y="48" />
+        <BottomLeft x="0" y="85" />
+        <BottomCenter x="42" y="85" />
+        <BottomRight x="85" y="85" />
+      </TexCoords>
+    </FullResizeImage>
+  </Windows>
+</Interface>

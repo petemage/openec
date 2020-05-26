@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Interface.xsd">
+    <Assets>
+        <Font name="OpenUI.Text.Default" 
+            face="UMEGOTHIC" file="fonts/UMEGOTHIC.ttf" 
+            height="18" texsize="256" antialias="true" hinting="true" 
+            autohinting="false" outline="false" />
+    </Assets>
+</Interface>

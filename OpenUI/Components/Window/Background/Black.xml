@@ -1,0 +1,27 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Windows>
+    <!-- Plain black background, used for e.g. context menus & tooltips -->
+    <FullResizeImage name="OpenUI.Window.Background.Black" layer="background" handleinput="false" texture="UO_Core">
+      <Sizes>
+        <TopLeft x="0" y="0" />
+        <Middle x="59" y="59" />
+        <BottomRight x="0" y="0" />
+      </Sizes>
+      <Anchors>
+        <Anchor point="topleft" relativePoint="topleft"/>
+        <Anchor point="bottomright" relativePoint="bottomright"/>
+      </Anchors>
+      <TexCoords>
+        <TopLeft x="260" y="4" />
+        <TopCenter x="263" y="4" />
+        <TopRight x="313" y="4" />
+        <MiddleLeft x="260" y="4" />
+        <MiddleCenter x="263" y="4" />
+        <MiddleRight x="313" y="4" />
+        <BottomLeft x="260" y="63" />
+        <BottomCenter x="263" y="63" />
+        <BottomRight x="313" y="63" />
+      </TexCoords> 
+    </FullResizeImage>
+  </Windows>
+</Interface>

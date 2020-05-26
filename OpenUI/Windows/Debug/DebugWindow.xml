@@ -1,0 +1,76 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Scripts>
+    <Script file="OpenUI/OpenUI.lua" />
+    <Script file="OpenUI/Windows/Debug/DebugWindow.lua" />
+    <Script file="OpenUI/Windows/Debug/Tabs/EventTab.lua" />
+    <Script file="OpenUI/Windows/Debug/Tabs/ChatTab.lua" />
+    <Script file="OpenUI/Windows/Debug/Tabs/LuaTab.lua" />
+    <Script file="OpenUI/Windows/Debug/Tabs/TextureTab.lua" />
+    <Script file="OpenUI/Windows/Debug/Tabs/WindowTab.lua" />
+    <Script file="OpenUI/Windows/Debug/Tabs/ModsTab.lua" />
+  </Scripts>
+  <Include file="OpenUI/Windows/Debug/Tabs/ChatTab.xml" />
+  <Include file="OpenUI/Windows/Debug/Tabs/TextureTab.xml" />
+  <Include file="OpenUI/Windows/Debug/Tabs/LuaTab.xml" />
+  <Include file="OpenUI/Windows/Debug/Tabs/ModsTab.xml" />
+  <Windows>
+    <Window name="OpenUI.DebugWindow" movable="true" layer="default" sticky="false">
+      <Size>
+        <AbsPoint x="500" y="500" />
+      </Size>
+      <Anchors>
+        <Anchor point="center" relativePoint="center" relativeTo="">
+          <AbsPoint x="0" y="0" />
+        </Anchor>
+      </Anchors>
+      <EventHandlers>
+        <EventHandler event="OnInitialize" function="OpenCore.Window.Handler.Initialize" />
+        <EventHandler event="OnShutdown" function="OpenCore.Window.Handler.Shutdown" />
+      </EventHandlers>
+      <Windows>
+        <FullResizeImage name="$parent.Background" alpha="0.5" inherits="OpenUI.Window.Background.Black" />
+        
+        <Label name="$parent.Title" inherits="UO_Default_Label_Color" font="UO_DefaultText" maxchars="256" textalign="center" handleinput="false" layer="popup" autoresizewidth="false">
+            <Size>
+                <AbsPoint x="200" y="30"/>
+            </Size>
+            <Anchors>
+                <Anchor point="top" relativePoint="top">
+                    <AbsPoint x="0" y="2" />
+                </Anchor>
+            </Anchors>
+        </Label>
+        
+        <Button name="$parent.PrevButton" inherits="OpenUI.Button.Previous.Small">
+           <Anchors>
+             <Anchor point="left" relativePoint="right" relativeTo="$parent.Title" />
+           </Anchors>
+           <EventHandlers>
+             <EventHandler event="OnLButtonUp" function="OpenCore.Window.Handler.PreviousTab" />
+           </EventHandlers>
+         </Button>
+         
+         <Button name="$parent.NextButton" inherits="OpenUI.Button.Next.Small">
+           <Anchors>
+             <Anchor point="right" relativePoint="left" relativeTo="$parent.Title" />
+           </Anchors>
+           <EventHandlers>
+             <EventHandler event="OnLButtonUp" function="OpenCore.Window.Handler.NextTab" />
+           </EventHandlers>
+         </Button>
+         
+         <Window name="$parent.Tabs">
+           <Size>
+             <AbsPoint x="0" y="0" />
+           </Size>
+           <Anchors>
+             <Anchor point="topleft" relativePoint="topleft" >
+               <AbsPoint x="0" y="30" />
+             </Anchor>
+             <Anchor point="bottomright" relativePoint="bottomright" />
+           </Anchors>
+         </Window>
+      </Windows>
+    </Window>
+  </Windows>
+</Interface>

@@ -1,0 +1,13 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Windows>
+    <Window name="MainMenuWindow" movable="false" layer="background">
+      <Size>
+        <AbsPoint x="0" y="0" />
+      </Size>
+      <EventHandlers>
+        <EventHandler event="OnShown" function="MainMenuWindow.OnShow" />
+        <EventHandler event="OnHidden" function="MainMenuWindow.OnHide" />
+      </EventHandlers>
+    </Window>
+  </Windows>
+</Interface>

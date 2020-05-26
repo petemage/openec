@@ -1,0 +1,113 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Windows>
+    <Window name="OpenUI.DebugWindow.Chat">
+      <Size>
+        <AbsPoint x="0" y="0" />
+      </Size>
+      <Anchors>
+        <Anchor point="topleft" relativePoint="topleft" />
+        <Anchor point="bottomright" relativePoint="bottomright" />  
+      </Anchors>
+      <Windows>
+        <LogDisplay name="$parent.LogDisplay" 
+            font="UO_DefaultText_12pt" 
+            scrollbar="$parent.Scrollbar" 
+            scrollbarPosition="right" 
+            maxchars="4096" 
+            maxentries="4096" 
+            wordwrap="true">
+           <Anchors>
+               <Anchor point="topleft" relativePoint="topleft">
+                   <AbsPoint x="0" y="0" />
+               </Anchor>
+               <Anchor point="bottomright" relativePoint="bottomright">
+                   <AbsPoint x="0" y="-40" />
+               </Anchor>
+           </Anchors>
+           <Windows>
+	           <VerticalScrollbar name="$parent.Scrollbar" 
+	               up="StandardVertScrollUpBtn" 
+	               down="StandardVertScrollDownBtn" 
+	               thumb="StandardVertScrollThumb" 
+	               gutter="StandardVertScrollGutter">
+	               <Anchors>
+                       <Anchor point="topright" relativePoint="topleft">
+                           <AbsPoint x="-10" y="0" />
+                       </Anchor>
+                       <Anchor point="bottomright" relativePoint="bottomright" />
+                   </Anchors>
+		            <Size>
+		                <AbsPoint x="20" y="0" />
+		            </Size>
+		            <ThumbOffset x="1" y="1" />
+		       </VerticalScrollbar>
+           </Windows>
+        </LogDisplay>
+        
+        <Window name="$parent.Footer" alpha="0.5">
+           <Size>
+             <AbsPoint x="0" y="0" />
+           </Size>
+           <Anchors>
+             <Anchor point="bottomleft" relativePoint="topleft" >
+               <AbsPoint x="0" y="-40" />
+             </Anchor>
+             <Anchor point="bottomright" relativePoint="bottomright" />
+           </Anchors>
+           <Windows>
+             <Window name="$parent.System" inherits="OpenUI.Window.CheckLabel.Small">
+               <Anchors>
+                 <Anchor point="left" relativePoint="left">
+	               <AbsPoint x="10" y="7" />
+	             </Anchor>
+	           </Anchors>
+	           <EventHandlers>
+	             <EventHandler event="OnLButtonUp" function="OpenUI.DebugWindow.Handler.ToggleSystem" />
+	           </EventHandlers>
+             </Window>
+             <Window name="$parent.Error" inherits="OpenUI.Window.CheckLabel.Small">
+               <Anchors>
+                 <Anchor point="right" relativePoint="left" relativeTo="$parent.System">
+                   <AbsPoint x="9" y="0" />
+                 </Anchor>
+               </Anchors>
+               <EventHandlers>
+                 <EventHandler event="OnLButtonUp" function="OpenUI.DebugWindow.Handler.ToggleError" />
+               </EventHandlers>
+             </Window>
+             <Window name="$parent.Debug" inherits="OpenUI.Window.CheckLabel.Small">
+               <Anchors>
+                 <Anchor point="right" relativePoint="left" relativeTo="$parent.Error">
+                   <AbsPoint x="9" y="0" />
+                 </Anchor>
+               </Anchors>
+               <EventHandlers>
+                 <EventHandler event="OnLButtonUp" function="OpenUI.DebugWindow.Handler.ToggleDebug" />
+               </EventHandlers>
+             </Window>
+             <Window name="$parent.Warning" inherits="OpenUI.Window.CheckLabel.Small">
+               <Anchors>
+                 <Anchor point="right" relativePoint="left" relativeTo="$parent.Debug">
+                   <AbsPoint x="9" y="0" />
+                 </Anchor>
+               </Anchors>
+               <EventHandlers>
+                 <EventHandler event="OnLButtonUp" function="OpenUI.DebugWindow.Handler.ToggleWarning" />
+               </EventHandlers>
+             </Window>
+             <Window name="$parent.Function" inherits="OpenUI.Window.CheckLabel.Small">
+               <Anchors>
+                 <Anchor point="right" relativePoint="left" relativeTo="$parent.Warning">
+                   <AbsPoint x="9" y="0" />
+                 </Anchor>
+               </Anchors>
+               <EventHandlers>
+	             <EventHandler event="OnLButtonUp" function="OpenCore.Window.Handler.ToggleFunction" />
+	           </EventHandlers>
+             </Window>
+           </Windows>
+         </Window>
+      </Windows>
+    </Window>
+  </Windows>
+</Interface>

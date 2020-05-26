@@ -1,0 +1,1 @@
+TextLogSetEnabled("UiLog", true)

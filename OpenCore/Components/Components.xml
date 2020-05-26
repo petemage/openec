@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../Interface.xsd">
+
+    <!-- Buttons & Checkboxes -->
+    <Include file="OpenCore/Components/Button/Next.xml" />
+    <Include file="OpenCore/Components/Button/Previous.xml" />
+    <Include file="OpenCore/Components/Button/Check.xml" />
+
+    <!-- Horizontal resize images (status bars) -->
+    <Include file="OpenCore/Components/HorizontalResizeImage/Blank.xml" />
+    <Include file="OpenCore/Components/HorizontalResizeImage/Blue.xml" />
+    <Include file="OpenCore/Components/HorizontalResizeImage/Yellow.xml" />
+
+    <!-- Window backgrounds (resizing images) -->
+    <Include file="OpenCore/Components/Window/Background/Black.xml" />
+    <Include file="OpenCore/Components/Window/Background/Frame.xml" />
+    <Include file="OpenCore/Components/Window/Background/InnerFrame.xml" />
+    <Include file="OpenCore/Components/Window/Background/OuterFrame.xml" />
+    <Include file="OpenCore/Components/Window/Background/ResizingFrame.xml" />
+    <Include file="OpenCore/Components/Window/Background/Simple.xml" />
+    <Include file="OpenCore/Components/Window/Background/MainMenuFrame.xml" />
+    <Include file="OpenCore/Components/Window/Background/Slot.xml" />
+    
+    <!-- Composite Windows (pure templates) -->
+    <Include file="OpenCore/Components/Window/CheckLabel/CheckLabel.xml" />
+</Interface>

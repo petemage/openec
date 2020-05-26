@@ -1,0 +1,66 @@
+<Interface
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+	<Include file="OpenUI/Components/SlottedWindow/SlottedWindow.xml" />
+	<Scripts>
+		<Script file="OpenUI/OpenUI.lua" />
+		<Script file="OpenUI/Windows/Spellbook/SpellbookWindow.lua" />
+	</Scripts>
+	<Windows>
+	   <Button name="OpenUI.Spellbook.Socket" texturescale="1.125" draganddrop="true">
+            <Size>
+                <AbsPoint x="56" y="56" />
+            </Size>
+            <TexCoords>
+                <Normal texture="hud_image" x="0" y="754" />
+                <NormalHighlit texture="hud_image" x="50" y="754" />
+                <Disabled texture="hud_image" x="0" y="754" />
+                <Pressed texture="hud_image" x="0" y="754" />
+                <PressedHighlit texture="hud_image" x="50" y="754" />
+            </TexCoords>
+            <EventHandlers>
+                <EventHandler event="OnLButtonDown" function="OpenUI.SpellbookWindow.OnLButtonDown" />
+                <EventHandler event="OnLButtonUp" function="OpenUI.SpellbookWindow.OnItemClick" />
+            </EventHandlers>
+            <Windows>
+                <DynamicImage name="$parent.Icon" texturescale="1.125" handleinput="false" layer="default">
+                    <Size>
+                        <AbsPoint x="48" y="48" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="center" relativePoint="center" relativeTo="">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+                </DynamicImage>
+            </Windows>
+        </Button>
+	
+		<Window name="OpenUI.Spellbook.Window" movable="true">
+			<Size>
+				<AbsPoint x="0" y="0" />
+			</Size>
+			<EventHandlers>
+				<EventHandler event="OnInitialize"
+					function="OpenUI.SpellbookWindow.OnInitialize" />
+				<EventHandler event="OnShutdown"
+					function="OpenUI.SpellbookWindow.OnShutdown" />
+				<EventHandler event="OnRButtonUp"
+					function="OpenUI.SpellbookWindow.OnClose" />
+			</EventHandlers>
+			<Windows>
+				<FullResizeImage name="$parent.Background"
+					alpha="0.5" inherits="OpenUI.Window.Background.Black" />
+
+                <Label name="$parent.Title" inherits="UO_Default_Label_Color" font="UO_DefaultText" maxchars="256" textalign="center" handleinput="false" layer="popup" autoresizewidth="false">
+                    <Size>
+                        <AbsPoint x="200" y="30"/>
+                    </Size>
+                    <Anchors>
+                        <Anchor point="top" relativePoint="top" />
+                    </Anchors>
+                </Label>
+			</Windows>
+		</Window>
+	</Windows>
+</Interface>

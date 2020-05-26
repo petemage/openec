@@ -1,0 +1,12 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Windows>
+    <Window name="ContainerWindow" layer="background" handleinput="false">
+      <Size>
+        <AbsPoint x="0" y="0" />
+      </Size>
+      <EventHandlers>
+        <EventHandler event="OnInitialize" function="OpenCore.Container.OnInitializeWindowWrap" />
+      </EventHandlers>
+    </Window>
+  </Windows>
+</Interface>

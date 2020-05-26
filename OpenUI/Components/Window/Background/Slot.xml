@@ -1,0 +1,30 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Windows>
+    <!-- Plain black background, used for e.g. context menus & tooltips -->
+    <FullResizeImage name="OpenUI.Window.Background.Slot" texturescale="1.125"
+        layer="background" 
+        handleinput="false" 
+        texture="hud_image">
+      <Sizes>
+        <TopLeft x="5" y="5" />
+        <Middle x="40" y="40" />
+        <BottomRight x="5" y="5" />
+      </Sizes>
+      <Anchors>
+        <Anchor point="topleft" relativePoint="topleft"/>
+        <Anchor point="bottomright" relativePoint="bottomright"/>
+      </Anchors>
+      <TexCoords>
+        <TopLeft x="5" y="759" />
+        <TopCenter x="5" y="759" />
+        <TopRight x="5" y="759" />
+        <MiddleLeft x="5" y="759" />
+        <MiddleCenter x="5" y="759" />
+        <MiddleRight x="5" y="759" />
+        <BottomLeft x="5" y="759" />
+        <BottomCenter x="5" y="759" />
+        <BottomRight x="5" y="759" />
+      </TexCoords> 
+    </FullResizeImage>
+  </Windows>
+</Interface>

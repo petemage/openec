@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="../Interface.xsd">
+
+    <!-- Assets -->
+    <Include file="Textures/Textures.xml" />
+    <Include file="Icons/Icons.xml" />
+    
+    
+    <Include file="OpenUI/Components/Components.xml" />
+    
+    <Include file="OpenUI/Theme/Default/Fonts.xml" />
+
+	<!-- Script Files -->
+	<Scripts>
+    	<Script file="OpenUI/OpenUI.lua" />
+        <Script file="OpenUI/Interface.lua" />
+    </Scripts>
+    
+    <Include file="OpenUI/Windows/MainMenu/MainMenuWindow.xml" />
+    <Include file="OpenUI/Windows/OverheadText/OverheadWindow.xml" />
+    <Include file="OpenUI/Windows/Hotbar/HotbarWindow.xml" />
+    <Include file="OpenUI/Windows/ContextMenu/ContextMenuWindow.xml" />
+    <Include file="OpenUI/Windows/Container/ContainerWindow.xml" />
+    <Include file="OpenUI/Windows/Drag/DragWindow.xml" />
+    <Include file="OpenUI/Windows/Paperdoll/PaperdollWindow.xml" />
+    <Include file="OpenUI/Windows/Spellbook/SpellbookWindow.xml" />
+    <Include file="OpenUI/Windows/Shop/ShopWindow.xml" />
+    <Include file="OpenUI/Windows/Debug/DebugWindow.xml" />
+    <Include file="OpenUI/Windows/Status/StatusWindow.xml" />
+</Interface>

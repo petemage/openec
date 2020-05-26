@@ -1,0 +1,27 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+  <Windows>
+    <Button name="OpenUI.Button.Check" 
+        backgroundtexture="UO_Core" 
+        highlighttexture="UO_Core" >
+      <Size>
+        <AbsPoint x="16" y="16" />
+      </Size>
+      <TexCoords>
+        <Normal x="220" y="28" />
+        <Pressed x="239" y="28" />
+      </TexCoords>
+    </Button>
+    
+    <Button name="OpenUI.Button.Check.Small" texturescale="0.75" inherits="OpenUI.Button.Check">
+      <Size>
+        <AbsPoint x="12" y="12" />
+      </Size>
+    </Button>
+    
+    <Button name="OpenUI.Button.Check.Large" texturescale="1.25" inherits="OpenUI.Button.Check">
+      <Size>
+        <AbsPoint x="20" y="20" />
+      </Size>
+    </Button>
+  </Windows>
+</Interface>
